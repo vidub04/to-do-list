@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 align="center">TO DO LIST</h1>
+
+
+    <button onclick="openModal()" class="add">➕ Add Task</button>
+
+<div id="taskModal" class="modal">
+    <div class="modal-content">
+        <h2>Add New Task</h2>
+
+        <input
+            type="text"
+            id="taskName"
+            placeholder="Enter task name"
+        >
+
+        <div class="modal-buttons">
+            <button onclick="insert()">Save</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="left" id="left">
+            <h1 align="center">Pending Tasks🔖</h1>
+
+        </div>
+
+        <div class="right" id="right">
+            <h1 align="center">Completed Tasks🔥</h1>
+        </div>
+    </div>
+
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
