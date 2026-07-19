@@ -13,7 +13,7 @@ app=FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5500"],
+    allow_origins=["https://to-do-list-six-dun-73.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
