@@ -3,13 +3,13 @@
 //then define python function with parameter as in url
 
 async function Deletion(id) {
-    await fetch(`http://localhost:8000/delete/${id}`,{method:"DELETE"});
+    await fetch(`https://to-do-list-six-dun-73.vercel.app/delete/${id}`,{method:"DELETE"});
     location.reload(); //for reloading entire page
 
 }
 
 async function markCompletion(id) {
-    await fetch(`http://localhost:8000/mark/${id}`,{method:"PUT"});
+    await fetch(`https://to-do-list-six-dun-73.vercel.app/mark/${id}`,{method:"PUT"});
     location.reload(); //for reloading entire page
 
 }
@@ -26,7 +26,7 @@ function closeModal() {
 async function insert() {
     const task = document.getElementById("taskName").value;
 
-    await fetch("http://localhost:8000/insert", {
+    await fetch("https://to-do-list-six-dun-73.vercel.app/insert", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -41,7 +41,7 @@ async function insert() {
 
 
 async function loadTasks() {
-    const response = await fetch("http://localhost:8000/showtasks");
+    const response = await fetch("https://to-do-list-six-dun-73.vercel.app/showtasks");
     const tasks = await response.json();
 
     const taskList = document.getElementById("left");
@@ -67,7 +67,7 @@ async function loadTasks() {
     });
 
 
-    const res=await fetch("http://localhost:8000/showdone")
+    const res=await fetch("https://to-do-list-six-dun-73.vercel.app/showdone")
     const done=await res.json()
 
     const list=document.getElementById("right")
